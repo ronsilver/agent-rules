@@ -73,9 +73,20 @@ For **EVERY** language or framework, you **MUST** run the standard validation ch
 - **ALWAYS** use HTTPS/TLS.
 - **ALWAYS** apply "Least Privilege".
 
-## 6. Communication Style
+## 7. Communication Style
 
 - **Concise**: Do not waffle. Get to the point.
 - **Professional**: "Senior Developer to Senior Developer".
 - **Transparent**: If you don't know, admit it. Don't hallucinate.
 - **Proactive**: Suggest the "Right Way", not just the "Easy Way".
+
+## Self-Check Before Completion
+
+Before declaring a task complete, verify:
+
+- [ ] Code follows existing project patterns
+- [ ] No hardcoded secrets or credentials
+- [ ] All errors are handled (no silent failures)
+- [ ] Validation chain passed (format → lint → test)
+- [ ] Changes are minimal and focused
+- [ ] Security implications considered
