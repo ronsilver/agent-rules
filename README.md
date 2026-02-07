@@ -1,6 +1,6 @@
 # Agent Development Rules
 
-Centralized development rules for AI coding agents (Windsurf, GitHub Copilot, Cursor, Claude Code, Codex CLI, Gemini CLI, OpenCode).
+Centralized development rules for AI coding agents (Windsurf, GitHub Copilot, Cursor, Claude Code, Codex CLI, Gemini CLI, Antigravity, OpenCode).
 
 ## Structure
 
@@ -253,6 +253,7 @@ pre-commit install
 | **claude-code** | ✅ Enabled | Claude Code (Anthropic) |
 | **codex-cli** | ✅ Enabled | OpenAI Codex CLI |
 | **gemini-cli** | ✅ Enabled | Google Gemini CLI |
+| **antigravity** | ✅ Enabled | Google Antigravity IDE |
 | **opencode** | ✅ Enabled | OpenCode |
 | **local-project** | ⬜ Disabled | Copy rules to local project |
 

@@ -2,7 +2,7 @@
 # Agent Development Rules - Manifest de Configuración v2.0
 # =============================================================================
 # Este archivo define la configuración central para sincronizar reglas
-# a diferentes agentes de AI (Windsurf, GitHub Copilot, Cursor, etc.)
+# a diferentes agentes de AI (Windsurf, GitHub Copilot, Cursor, Antigravity, etc.)
 #
 # Uso: ./scripts/sync.sh [--agent <nombre>] [--dry-run]
 # =============================================================================
@@ -227,7 +227,7 @@ agents:
         format: individual
         output_extension: ".mdc"
         strip_frontmatter: false
-        transform_frontmatter: true  # paths -> globs, add description
+        transform_frontmatter: true # paths -> globs, add description
         header: |
           ---
           description: "{{name}}"
@@ -300,6 +300,34 @@ agents:
 
           <!-- Generado automáticamente por sync.sh -->
           <!-- Última actualización: {{timestamp}} -->
+
+  antigravity:
+    enabled: true
+    description: "Google Antigravity IDE"
+    detect:
+      paths:
+        - "/Applications/Antigravity.app"
+        - "${HOME}/.gemini/antigravity"
+      commands: []
+    targets:
+      rules:
+        path: "${HOME}/.gemini/antigravity/rules"
+        format: individual
+        strip_frontmatter: false
+      instructions:
+        path: "${HOME}/.gemini/GEMINI.md"
+        format: merged
+        strip_frontmatter: true
+        header: |
+          # Google Antigravity - Global Instructions
+
+          <!-- Generado automáticamente por sync.sh -->
+          <!-- Última actualización: {{timestamp}} -->
+
+      workflows:
+        path: "${HOME}/.gemini/antigravity/global_workflows"
+        format: individual
+        strip_frontmatter: false
 
   opencode:
     enabled: true
